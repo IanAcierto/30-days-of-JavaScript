@@ -1,0 +1,85 @@
+<!DOCTYPE html><!--every html file needs a doctype tag-->
+<html lang="en"><!--everything in html is wrapped in an html tag, with this one having the language attribute set to a value of english-->
+    <head><!--the head of the file is like the thinking, this isn't shown but important information about the file is in here-->
+        <meta charset="UTF-8">
+        <title> JS Drum Kit</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+       <!--itemizing the keys to make them objects to be manipulated-->
+        <div class="keys">
+            <div id="key_a" data-key="65" class="key"> <!--recieving the data value of the key and putting this object in the key class-->
+                <kbd>A</kbd> <!--key letter, which will be displayed?>-->
+                <span class="sound">CLAP</span>
+            </div>
+            <!--repeat the process for the other keys, look up key code values-->
+            <div data-key="83" class="key">
+                <kbd>S</kbd>
+                <span class="sound">HIHAT</span>
+            </div>
+            <!--i could template it out so it's not so much work but i need practice so i'll do it by hand-->
+            <div data-key="68" class="key">
+                <kbd>D</kbd>
+                <span class="sound">KICK</span>
+            </div>
+            <div data-key="70" class="key">
+                <kbd>F</kbd>
+                <span class="sound">OPENHAT</span>
+            </div>
+            <!--remember to wrap the div on the actual key around the kbd and span tags too because they're apart of the object-->
+            <div data-key="71" class="key">
+                <kbd>G</kbd>
+                <span class="sound">BOOM</span>
+            </div>
+            <div data-key="72" class="key">
+                <kbd>H</kbd>
+                <span class="sound">RIDE</span>
+            </div>
+            <div data-key="74" class="key">
+                <kbd>J</kbd>
+                <span class="sound">SNARE</span>
+            </div>
+            <div data-key="75" class="key">
+                <kbd>K</kbd>
+                <span class="sound">TOM</span>
+            </div>
+            <div data-key="76" class="key">
+                <kbd>L</kbd>
+                <span class="sound">TINK</span>
+            </div>
+        </div><!--closing keys class--> 
+        
+        <div class="audio_files"> <!-- man this is weird, idk if this is gonna work, i feel like i should put this in my objects that i set up there-->
+            <audio id="clap" controls style="display:none">
+                <source src="sounds/clap.wav" type="audio/mpeg">
+            </audio>
+            <audio id="hihat" controls style="display:none">
+                <source src="sounds/hihat.wav" type="audio/mpeg">
+            </audio>
+            <audio id="kick" controls style="display:none">
+                <source src="sounds/kick.wav" type="audio/mpeg">
+            </audio>
+            <audio id="openhat" controls style="display:none">
+                <source src="sounds/openhat.wav" type="audio/mpeg">
+            </audio>
+            <audio id="boom" controls style="display:none">
+                <source src="sounds/boom.wav" type="audio/mpeg">
+            </audio>
+            <audio id="ride" controls style="display:none">
+                <source src="sounds/ride.wav" type="audio/mpeg">
+            </audio>
+            <audio id="snare" controls style="display:none">
+                <source src="sounds/snare.wav" type="audio/mpeg">
+            </audio>
+            <audio id="tom" controls style="display:none">
+                <source src="sounds/tom.wav" type="audio/mpeg">
+            </audio>
+            <audio id="tink" controls style="display:none">
+                <source src="sounds/tink.wav" type="audio/mpeg">
+            </audio>
+            
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>

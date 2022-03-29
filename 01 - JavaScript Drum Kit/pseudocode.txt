@@ -1,0 +1,54 @@
+doctype
+wrap everything in html
+head
+   define the characterset
+   title it
+   link the stylesheet
+
+body
+    connect keys to specific sounds and wrap it all in a div
+        each key on the keyboard has a key value, S for example has a code of 83
+
+            <div class="keys">
+                key data goes in here
+                <div=data-key=(key value) class=key
+                <kbd>(key letter)</kbd>
+                    https://css-tricks.com/a-complete-guide-to-data-attributes/
+            </div>
+
+        make an event listener for a keypress and if the key is pressed then play the sound files
+            there's a couple ways to do this
+                make an audio object and hide it
+
+                    <<audio id="audio" controls style="display:none">
+                        <source src="http://butlerccwebdev.net/support/html5-video/media/soundfile.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+                    </audio>
+                then make an eventlistener for a keypress and assure it's the right key:
+                   document.addEventListener('keydown', function(e) {
+                         if (e.keyCode == 65) {
+                            document.getElementById('audio').play();
+                        }
+                    }); 
+
+            seems a little complicated but the next one is a little simpler
+
+                can use a specified key as trigger for the Audio Clip
+
+                      if (e.keyCode == 65) {
+                        if(document.getElementById('audio').paused){
+                        document.getElementById('audio').play();
+                    }
+                    else{
+                        document.getElementById('audio').pause;
+                    }
+                    });
+
+
+
+
+
+
+
+
+
+
